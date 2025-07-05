@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineScope - Movie Recommendations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" sizes="32x32" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 CineScope</h1>
+            <p>Discover Cinematic Masterpieces Tailored for You</p>
+        </header>
+
+        <div id="userForm" class="form-section">
+            <h2>Your Cinema Profile</h2>
+            <form id="preferencesForm">
+                <div class="form-group">
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="userAge">Age:</label>
+                    <input type="number" id="userAge" min="1" max="120" placeholder="Your age" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="favoriteActor">Favorite Actor:</label>
+                    <input type="text" id="favoriteActor" placeholder="e.g., Leonardo DiCaprio" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="favoriteActress">Favorite Actress:</label>
+                    <input type="text" id="favoriteActress" placeholder="e.g., Meryl Streep" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="preferredGenre">Preferred Genre:</label>
+                    <select id="preferredGenre" required>
+                        <option value="">Choose your genre</option>
+                        <option value="action">Action & Adventure</option>
+                        <option value="romantic">Romance & Drama</option>
+                        <option value="drama">Drama & Biography</option>
+                        <option value="comedy">Comedy & Family</option>
+                        <option value="thriller">Thriller & Suspense</option>
+                        <option value="horror">Horror & Mystery</option>
+                        <option value="sci-fi">Sci-Fi & Fantasy</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Discover My Movies</button>
+            </form>
+        </div>
+
+        <div id="recommendationsSection" class="recommendations-section" style="display: none;">
+            <div class="user-info">
+                <h2>Welcome to Your Cinema, <span id="displayName"></span>!</h2>
+                <p>Based on your cinematic taste, here are some films that will captivate your imagination</p>
+            </div>
+
+            <div class="search-section">
+                <h3>🔍 Explore the Film Archive</h3>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search by title, genre, or discover hidden gems...">
+                    <button id="searchBtn">Search Films</button>
+                </div>
+            </div>
+
+            <div class="movies-grid" id="moviesGrid">
+                <!-- Movies will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
